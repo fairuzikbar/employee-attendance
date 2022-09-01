@@ -45,9 +45,9 @@ const EmployeeRepository = (db) => {
         }
     }
 
-    const deleted = async (employee_id) => {
+    const deleted = async (id) => {
         try {
-            await db.query(EmployeeQuery().DELETE_EMPLOYEE,[employee_id])
+            await db.query(EmployeeQuery().DELETE_EMPLOYEE,[id])
             return { message : `Delete ID ${id} berhasil` }
         } catch (error) {
             console.log(error.message);

@@ -32,7 +32,7 @@ const EmployeeController = () => {
 
     const deleteEmployeeData = async (req,res) => {
         try {
-            const employee_id = req.params.employee_id;
+            const employee_id = req.params.id;
             const employee = await req.service.deleteEmployee(+employee_id);
             res.json(Response().successMessage(res.statusCode, 'SUCCESS', employee));
         } catch (error) {

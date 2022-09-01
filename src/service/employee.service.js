@@ -25,9 +25,9 @@ const EmployeeService = (employeeRepository) => {
         }
     }
 
-    const deleteEmployee = async (employee_id) => {
+    const deleteEmployee = async (id) => {
         try {
-            return await deleted(employee_id);
+            return await deleted(id);
         } catch (error) {
             console.log(error.message);
         }
